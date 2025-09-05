@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function Footer() {
@@ -6,9 +7,9 @@ function Footer() {
     <footer className="footer">
       <p>&copy; {new Date().getFullYear()} Mahalaxmi Plastics. All rights reserved.</p>
       <div className="footer-links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
       </div>
     </footer>
   );
