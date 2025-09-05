@@ -19,7 +19,7 @@ function Navbar() {
 
         {/* Logo */}
         <img 
-          src="\logo\ChatGPT Image Sep 5, 2025, 11_10_58 AM.png" 
+          src="\logo\image.png" 
           alt="Mahalaxmi Plastics Logo" 
           className="logo" 
         />

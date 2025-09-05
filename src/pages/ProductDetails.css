@@ -1,35 +1,11 @@
 .image-detail-view {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
+  flex-direction: column; /* everything stacked vertically */
+  align-items: center;
   padding: 2rem;
   background: #f9fafb;
   min-height: 100vh;
-  flex-wrap: wrap;
-}
-
-.sidebar-thumbnails {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  flex-shrink: 0;
-}
-
-.thumbnail-img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.thumbnail-img:hover,
-.thumbnail-img.active {
-  transform: scale(1.05);
-  border-color: #0070f3;
+  gap: 1.5rem;
 }
 
 .main-image-container {
@@ -41,6 +17,9 @@
   max-width: 600px;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-image {
@@ -66,7 +45,39 @@
   cursor: pointer;
 }
 
-.main-image-container h2 {
+/* Thumbnails below main image */
+.sidebar-thumbnails {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.thumbnail-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.thumbnail-img:hover,
+.thumbnail-img.active {
+  transform: scale(1.05);
+  border-color: #0070f3;
+}
+
+/* Product details below thumbnails */
+.product-details {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.product-details h2 {
   font-size: 1.8rem;
   margin: 0.5rem 0;
   color: #111827;
@@ -83,33 +94,21 @@
   font-size: 1rem;
   color: #4b5563;
   line-height: 1.6;
-  margin-top: 0.5rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .image-detail-view {
-    flex-direction: column;
-    align-items: center;
-  }
-  .sidebar-thumbnails {
-    flex-direction: row;
-    justify-content: center;
-    gap: 0.75rem;
-    margin-bottom: 10px;
-  }
   .thumbnail-img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
   .main-image-container {
-    max-width: 100%;
     padding: 1rem;
   }
   .main-image {
     max-height: 300px;
   }
-  .main-image-container h2 {
+  .product-details h2 {
     font-size: 1.5rem;
   }
   .price {
@@ -129,10 +128,10 @@
 
 @media (max-width: 480px) {
   .thumbnail-img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
-  .main-image-container h2 {
+  .product-details h2 {
     font-size: 1.3rem;
   }
   .price {
