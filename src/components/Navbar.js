@@ -18,7 +18,12 @@ function Navbar() {
         </button>
 
         {/* Logo */}
-        <h2 className="logo">Mahalaxmi Plastics</h2>
+        <img 
+          src="\logo\ChatGPT Image Sep 5, 2025, 10_40_19 AM.png" 
+          alt="Mahalaxmi Plastics Logo" 
+          className="logo" 
+        />
+
       </div>
 
       {/* Nav Menu */}

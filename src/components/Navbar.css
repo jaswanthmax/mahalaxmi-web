@@ -99,3 +99,19 @@
     height: 90px; /* taller if navbar expands on mobile */
   }
 }
+
+.logo {
+  height: 60px;       /* Adjust logo height */
+  width: auto;        /* Maintain aspect ratio */
+  display: block;     /* Ensures proper spacing */
+  margin: 0;          /* Remove default margins */
+  padding: 0;         /* Remove default padding */
+}
+
+/* Optional: make it responsive */
+@media (max-width: 768px) {
+  .logo {
+    height: 40px;     /* Smaller logo on mobile */
+  }
+}
+
