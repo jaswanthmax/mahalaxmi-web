@@ -102,7 +102,7 @@
 
 .logo {
   height: 60px;       /* Adjust logo height */
-  width: auto;        /* Maintain aspect ratio */
+  width: 80px;        /* Maintain aspect ratio */
   display: block;     /* Ensures proper spacing */
   margin: 0;          /* Remove default margins */
   padding: 0;         /* Remove default padding */
