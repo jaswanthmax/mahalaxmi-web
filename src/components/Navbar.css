@@ -22,6 +22,8 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: #fff;
+  height: 70px; /* Adjust logo height */
+  display: block;
 }
 
 .menu-btn {
@@ -57,11 +59,7 @@
   display: flex;
 }
 
-/* Spacer to prevent overlap */
-.navbar-spacer {
-  height: 70px; /* same as navbar height */
-}
-
+/* Desktop view */
 @media (min-width: 768px) {
   .navbar-header {
     flex-direction: row;
@@ -87,37 +85,4 @@
     padding: 0;
     width: auto;
   }
-
-  .navbar-spacer {
-    height: 70px; /* keep spacer same on desktop */
-  }
-}
-
-/* Mobile adjustments */
-@media (max-width: 480px) {
-  .navbar-spacer {
-    height: 90px; /* taller if navbar expands on mobile */
-  }
-}
-.logo {
-  height: 150px;       /* Bigger logo height */
-  width: auto;         /* Maintain aspect ratio automatically */
-  display: block;      /* Proper spacing */
-  margin: 0 auto;      /* Center the logo horizontally */
-  padding: 0;          /* Remove default padding */
-}
-
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-  .logo {
-    height: 80px;      /* Smaller but still clear on mobile */
-    width: auto;       /* Keep aspect ratio */
-  }
-}
-
-/* Optional: if you want extra clarity, you can add this */
-.logo img {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
