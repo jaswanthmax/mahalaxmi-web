@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <header className="navbar-header">
       <div className="navbar-container">
-        {/* Hamburger button on left */}
+        {/* Hamburger button */}
         <button
           className="menu-btn"
           aria-expanded={menuOpen}
@@ -21,17 +21,11 @@ function Navbar() {
         <h2 className="logo">Mahalaxmi Plastics</h2>
       </div>
 
-      {/* Menu Links */}
+      {/* Nav Menu */}
       <nav className={`navbar-nav ${menuOpen ? "open" : ""}`}>
-        <Link to="/" onClick={() => setMenuOpen(false)}>
-          Home
-        </Link>
-        <Link to="/about" onClick={() => setMenuOpen(false)}>
-          About
-        </Link>
-        <Link to="/contact" onClick={() => setMenuOpen(false)}>
-          Contact
-        </Link>
+        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+        <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
       </nav>
     </header>
   );

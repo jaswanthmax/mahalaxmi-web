@@ -24,7 +24,7 @@ function Jewellery() {
 
   return (
     <div className="category-container">
-      <h1>Hanger Collection</h1>
+      <h1 class="vv">Hanger Collection</h1>
       <div className="category-grid">
         {products.map((product, index) => (
           <div

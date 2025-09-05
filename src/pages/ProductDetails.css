@@ -6,14 +6,14 @@
   padding: 2rem;
   background: #f9fafb;
   min-height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  flex-wrap: wrap;
 }
 
-/* Sidebar thumbnails */
 .sidebar-thumbnails {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  flex-shrink: 0;
 }
 
 .thumbnail-img {
@@ -26,12 +26,12 @@
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.thumbnail-img:hover {
+.thumbnail-img:hover,
+.thumbnail-img.active {
   transform: scale(1.05);
   border-color: #0070f3;
 }
 
-/* Main image area */
 .main-image-container {
   position: relative;
   background: #fff;
@@ -51,7 +51,6 @@
   margin-bottom: 1rem;
 }
 
-/* Close button */
 .close-btn {
   position: absolute;
   top: 15px;
@@ -65,14 +64,8 @@
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s ease;
 }
 
-.close-btn:hover {
-  background: #e11d48;
-}
-
-/* Product details */
 .main-image-container h2 {
   font-size: 1.8rem;
   margin: 0.5rem 0;
@@ -91,4 +84,61 @@
   color: #4b5563;
   line-height: 1.6;
   margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-detail-view {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar-thumbnails {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 10px;
+  }
+  .thumbnail-img {
+    width: 50px;
+    height: 50px;
+  }
+  .main-image-container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  .main-image {
+    max-height: 300px;
+  }
+  .main-image-container h2 {
+    font-size: 1.5rem;
+  }
+  .price {
+    font-size: 1.2rem;
+  }
+  .product-description {
+    font-size: 0.95rem;
+  }
+  .close-btn {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnail-img {
+    width: 40px;
+    height: 40px;
+  }
+  .main-image-container h2 {
+    font-size: 1.3rem;
+  }
+  .price {
+    font-size: 1.1rem;
+  }
+  .product-description {
+    font-size: 0.9rem;
+  }
 }

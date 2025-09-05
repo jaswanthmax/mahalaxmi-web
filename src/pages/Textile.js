@@ -24,7 +24,7 @@ function Textile() {
 
   return (
     <div className="category-container">
-      <h1>Textile Collection</h1>
+      <h1 class="vv">Textile Collection</h1>
       <div className="category-grid">
         {products.map((product, index) => (
           <div

@@ -76,19 +76,3 @@ form button {
 form button:hover {
   background: #444;
 }
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: #fff;
-  margin-top: 2rem;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 480px) {
-  section {
-    padding: 1.5rem 1rem;
-  }
-}

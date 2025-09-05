@@ -24,7 +24,7 @@ function Packaging() {
 
   return (
     <div className="category-container">
-      <h1>Mannequin Collection</h1>
+      <h1 class="vv">Mannequin Collection</h1>
       <div className="category-grid">
         {products.map((product, index) => (
           <div

@@ -27,7 +27,7 @@ function All() {
 
   return (
     <div className="category-container">
-      <h1>All Products Collection</h1>
+      <h1 class="vv">All Products Collection</h1>
       <div className="category-grid">
         {products.map((product, index) => (
           <div

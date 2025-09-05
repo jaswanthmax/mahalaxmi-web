@@ -1,71 +1,68 @@
+/* MAIN CONTENT WRAPPER */
+.main-content {
+  padding-top: 70px;   /* space for fixed navbar */
+  padding-bottom: 80px; /* space for fixed footer */
+}
+
+/* CATEGORY GRID */
 .category-container {
   padding: 20px;
 }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
+.vv {
+  padding-top: 40px;
 }
 
-.category-card img {
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
-}
+/* ... rest of your existing category grid styles ... */
 
-.category-card img:hover {
-  transform: scale(1.05);
-}
-
-/* Detail view like Daikin AC product page */
+/* DETAIL VIEW */
 .image-detail-view {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.sidebar-thumbnails {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* ... rest of your existing detail view styles ... */
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 90px;   /* taller for mobile navbar */
+    padding-bottom: 100px; /* taller for mobile footer */
+  }
+
+  .image-detail-view {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .sidebar-thumbnails {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-thumbnails img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .main-image {
+    max-width: 100%;
+  }
+
+  .close-btn {
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+    padding: 4px 8px;
+  }
 }
 
-.sidebar-thumbnails img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border: 2px solid transparent;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.sidebar-thumbnails img.active,
-.sidebar-thumbnails img:hover {
-  border-color: #007bff;
-}
-
-.main-image-container {
-  flex: 1;
-  position: relative;
-}
-
-.main-image {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-}
-
-.close-btn {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: red;
-  color: white;
-  font-size: 20px;
-  border: none;
-  border-radius: 50%;
-  padding: 5px 10px;
-  cursor: pointer;
+@media (max-width: 480px) {
+  .main-content {
+    padding-top: 100px;  /* mobile navbar height */
+    padding-bottom: 110px; /* mobile footer height */
+  }
 }
