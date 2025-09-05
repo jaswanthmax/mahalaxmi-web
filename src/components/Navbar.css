@@ -99,19 +99,25 @@
     height: 90px; /* taller if navbar expands on mobile */
   }
 }
-
 .logo {
-  height: 95px;       /* Adjust logo height */
-  width: 105px;        /* Maintain aspect ratio */
-  display: block;     /* Ensures proper spacing */
-  margin: 0;          /* Remove default margins */
-  padding: 0;         /* Remove default padding */
+  height: 150px;       /* Bigger logo height */
+  width: auto;         /* Maintain aspect ratio automatically */
+  display: block;      /* Proper spacing */
+  margin: 0 auto;      /* Center the logo horizontally */
+  padding: 0;          /* Remove default padding */
 }
 
-/* Optional: make it responsive */
+/* Responsive for smaller screens */
 @media (max-width: 768px) {
   .logo {
-    height: 40px;     /* Smaller logo on mobile */
+    height: 80px;      /* Smaller but still clear on mobile */
+    width: auto;       /* Keep aspect ratio */
   }
 }
 
+/* Optional: if you want extra clarity, you can add this */
+.logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
