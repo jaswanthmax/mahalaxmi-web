@@ -42,12 +42,14 @@
 }
 
 /* Mobile */
+/* Mobile */
 @media (max-width: 480px) {
   .category-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
   .category-card h3 {
     font-size: 0.85rem;
   }
 }
+
